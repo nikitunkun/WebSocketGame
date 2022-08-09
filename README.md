@@ -25,7 +25,7 @@ cd WebSocketGame
 ```
 - Run main.py
 ```
-python3 backend/main.py
+uvicorn --host 0.0.0.0 --port 8000 --reload backend.main:app
 or
 make run
 ```
