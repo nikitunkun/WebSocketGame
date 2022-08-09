@@ -1,0 +1,16 @@
+.*
+venv
+!.gitignore
+!.gitkeep
+!.cmt
+!.coveragerc
+!.dockerignore
+!.isort.cfg
+!.pylintrc
+!.env.dist
+!.test.env.dist
+!.github
+
+# Python stuff
+__pycache__
+/ venv
