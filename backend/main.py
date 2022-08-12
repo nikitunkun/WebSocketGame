@@ -33,11 +33,11 @@ class ConnectionManager:
         websocket.cookies["user"] = str(user)
         for connection in self.active_connections:
             await websocket.send_json({"event": "create", "user": connection.cookies["user"]})
-
-        self.active_connections.append(websocket)
-
+        
         for connection in self.active_connections:
             await connection.send_json({"event": "create", "user": user})
+
+        self.active_connections.append(websocket)
 
     def disconnect(self, websocket: WebSocket):
         """
